@@ -129,3 +129,18 @@ form button {
 form button:hover {
     background-color: #0054a6;
 }
+
+
+.social-media-buttons a, .direct-contact-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #003073;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.social-media-buttons a:hover, .direct-contact-links a:hover {
+    background-color: #0054a6;
+}
