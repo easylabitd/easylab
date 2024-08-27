@@ -65,7 +65,8 @@ h1, h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    width: 250px;
+    flex: 1 1 calc(25% - 40px); /* 25% width minus the gap */
+    box-sizing: border-box;
     padding: 15px;
     transition: transform 0.3s;
 }
@@ -99,37 +100,6 @@ footer {
     width: 100%;
     bottom: 0;
 }
-
-form {
-    margin-top: 20px;
-}
-
-form label {
-    display: block;
-    margin: 5px 0;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    background-color: #003073;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #0054a6;
-}
-
 
 .social-media-buttons a, .direct-contact-links a {
     display: inline-block;
