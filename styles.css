@@ -65,7 +65,7 @@ h1, h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    flex: 1 1 calc(25% - 40px); /* 25% width minus the gap */
+    flex: 1 1 auto; /* Allow the cards to auto adjust based on content */
     box-sizing: border-box;
     padding: 15px;
     transition: transform 0.3s;
@@ -79,16 +79,6 @@ h1, h2 {
     width: 100%;
     height: 150px;
     object-fit: cover;
-}
-
-.card h3 {
-    margin: 10px 0;
-    color: #003073;
-}
-
-.card p {
-    font-size: 14px;
-    color: #555;
 }
 
 footer {
