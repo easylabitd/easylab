@@ -6,19 +6,20 @@ body {
     color: #333;
     direction: rtl;
     text-align: right;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
 }
 
-body.loaded {
-    opacity: 1;
-}
-
-header {
+.header-top {
     background-color: #003073;
     color: #fff;
     padding: 10px 0;
     text-align: center;
+}
+
+.nav-bar {
+    background-color: #0054a6; /* لون مختلف أو نفس اللون حسب تفضيلاتك */
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ظل خفيف للشريط */
 }
 
 .logo img {
@@ -71,7 +72,6 @@ h1, h2 {
     gap: 20px;
 }
 
-/* إعداد الكارد */
 .card {
     background-color: #fff;
     border-radius: 10px;
@@ -81,12 +81,11 @@ h1, h2 {
     flex: 1 1 auto;
     box-sizing: border-box;
     padding: 15px;
-    opacity: 0; /* البداية بدون رؤية */
-    transform: translateY(20px); /* البداية من أسفل */
+    opacity: 0;
+    transform: translateY(20px);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* تأثير التكبير والدوران عند التمرير */
 .card:hover {
     transform: scale(1.05) rotate(1deg);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
@@ -124,7 +123,31 @@ footer {
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-social-media-buttons a:hover, .direct-contact-links a:hover {
+.social-media-buttons a:hover, .direct-contact-links a:hover {
     background-color: #0054a6;
     transform: scale(1.05);
+}
+
+
+/* إضافة التنسيق لشريط الروابط عند تحويله إلى ثابت */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل للشريط الثابت */
+}
+
+.sticky + section {
+    padding-top: 60px; /* تعديل لضمان عدم تداخل المحتوى مع الشريط الثابت */
+}
+
+/* تنسيق div التعويض */
+#nav-placeholder {
+    display: none; /* إخفاء بشكل افتراضي */
+}
+
+.sticky + #nav-placeholder {
+    display: block;
+    height: 60px; /* نفس ارتفاع شريط الأدوات */
 }

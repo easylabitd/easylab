@@ -44,3 +44,42 @@ document.addEventListener("DOMContentLoaded", function() {
     // استدعاء التحقق فور تحميل الصفحة
     checkCards();
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // تحديد شريط الروابط
+    const navBar = document.querySelector('.nav-bar');
+    // تحديد مكان الشريط الأساسي
+    const sticky = navBar.offsetTop;
+
+    function checkScroll() {
+        // إذا تجاوز التمرير مكان الشريط الأساسي
+        if (window.pageYOffset >= sticky) {
+            navBar.classList.add("sticky");
+        } else {
+            navBar.classList.remove("sticky");
+        }
+    }
+
+    // إضافة حدث التمرير
+    window.addEventListener('scroll', checkScroll);
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navBar = document.querySelector('.nav-bar');
+    const navPlaceholder = document.getElementById('nav-placeholder');
+    const sticky = navBar.offsetTop;
+
+    function checkScroll() {
+        if (window.pageYOffset >= sticky) {
+            navBar.classList.add("sticky");
+            navPlaceholder.style.height = `${navBar.offsetHeight}px`; /* تعيين ارتفاع div التعويضي */
+        } else {
+            navBar.classList.remove("sticky");
+            navPlaceholder.style.height = '0'; /* إعادة تعيين ارتفاع div التعويضي */
+        }
+    }
+
+    window.addEventListener('scroll', checkScroll);
+});
