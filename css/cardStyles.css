@@ -1,0 +1,79 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* عرض 5 كاردات في كل صف */
+    gap: 20px; /* فجوة بين الكاردات */
+}
+
+@media (max-width: 1199px) {
+    .card-container {
+        grid-template-columns: repeat(4, 1fr); /* عرض 4 كاردات في كل صف عند عرض أقل من 1200 بكسل */
+    }
+}
+
+@media (max-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* عرض 3 كاردات في كل صف عند عرض أقل من 900 بكسل */
+    }
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr; /* عرض كارد واحد في كل صف عند عرض أقل من 600 بكسل */
+    }
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+.card img {
+    width: 100%;
+    aspect-ratio: 10 / 9; /* النسبة 60% */
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+
+/*      */
+
+.system-card-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* عرض 6 كاردات في كل صف */
+    gap: 10px; /* فجوة بين الكاردات */
+}
+
+@media (max-width: 1199px) {
+    .system-card-container {
+        grid-template-columns: repeat(5, 1fr); /* عرض 5 كاردات في كل صف عند عرض أقل من 1200 بكسل */
+    }
+}
+
+@media (max-width: 900px) {
+    .system-card-container {
+        grid-template-columns: repeat(4, 1fr); /* عرض 4 كاردات في كل صف عند عرض أقل من 900 بكسل */
+    }
+}
+
+@media (max-width: 600px) {
+    .system-card-container {
+        grid-template-columns: repeat(2, 1fr); /* عرض 2 كاردات في كل صف عند عرض أقل من 600 بكسل */
+    }
+}

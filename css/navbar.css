@@ -1,0 +1,69 @@
+/* تنسيقات الهيدر (Header) */
+.header-top {
+    background-color: #003073;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 150px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* تنسيقات شريط التنقل (Navbar) */
+.nav-bar {
+    background-color: #0054a6; /* لون مختلف أو نفس اللون حسب تفضيلاتك */
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ظل خفيف للشريط */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* إضافة التنسيق لشريط الروابط عند تحويله إلى ثابت */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل للشريط الثابت */
+}
+
+.sticky + section {
+    padding-top: 60px; /* تعديل لضمان عدم تداخل المحتوى مع الشريط الثابت */
+}
+
+/* تنسيق div التعويض */
+#nav-placeholder {
+    display: none; /* إخفاء بشكل افتراضي */
+}
+
+.sticky + #nav-placeholder {
+    display: block;
+    height: 60px; /* نفس ارتفاع شريط الأدوات */
+}
